@@ -12,9 +12,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 2. **Login to Azure Portal:**  
    👉 [Azure Portal](https://portal.azure.com)  
 
-📌 **Screenshot:**
-![Azure Subscription](assets/topology.png)
-
 ---
 
 ## Part 2: Create the Honeypot (Azure Virtual Machine)
@@ -26,14 +23,13 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Select **Windows 10**  
    - Choose an appropriate **size**  
 
-📌 **Screenshot:**
 ![Virtual Machine Creation](assets/VM1.png)
+![Virtual Machine Creation](assets/VM2.png)
 
 2. **Set up Network Security Group:**
    - Navigate to **Networking**
    - **Allow All Inbound Traffic** by creating a new rule
 
-📌 **Screenshot:**
 ![NSG Rules](assets/NSG-rules.png)
 
 3. **Log into the Virtual Machine & Disable Firewall:**
@@ -78,7 +74,7 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 
 1. **Observe SecurityEvent logs** in Log Analytics Workspace.
 2. **Download & Import GeoIP Watchlist**  
-   - Download: [geoip-summarized.csv](#)  
+   - Download: [assets/geoip-summarized.csv](#)  
    - Import as a **Sentinel Watchlist**
    - Set:
      - **Name/Alias:** geoip  
@@ -86,8 +82,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
      - **Search Key:** network  
      - **54,000 rows should be imported**
 
-📌 **Screenshot:**
-![GeoIP Data](assets/geoip-summarized.csv)
 
 3. **Query with Geolocation Data**:
    ```kql

@@ -74,7 +74,7 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 
 1. **Observe SecurityEvent logs** in Log Analytics Workspace.
 2. **Download & Import GeoIP Watchlist**  
-   - Download: [assets/geoip-summarized.csv](#)  
+   - Download: [geoip](assets/geoip-summarized.csv)  
    - Import as a **Sentinel Watchlist**
    - Set:
      - **Name/Alias:** geoip  
@@ -101,7 +101,7 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 1. **Create a Workbook in Sentinel**
    - Delete the **default elements**
    - Add a **Query element**
-   - Go to **Advanced Editor** & Paste JSON from `[assets/map.json]`
+   - Go to **Advanced Editor** & Paste JSON from ![map.json](assets/map.json)
 
 2. **Visualize the Attack Map**
    - Observe the **Query**  

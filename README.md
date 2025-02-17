@@ -12,6 +12,9 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 2. **Login to Azure Portal:**  
    👉 [Azure Portal](https://portal.azure.com)  
 
+📌 **Screenshot:**
+![Azure Subscription](assets/topology.png)
+
 ---
 
 ## Part 2: Create the Honeypot (Azure Virtual Machine)
@@ -23,13 +26,22 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Select **Windows 10**  
    - Choose an appropriate **size**  
 
+📌 **Screenshot:**
+![Virtual Machine Creation](assets/VM1.png)
+
 2. **Set up Network Security Group:**
    - Navigate to **Networking**
    - **Allow All Inbound Traffic** by creating a new rule
 
+📌 **Screenshot:**
+![NSG Rules](assets/NSG-rules.png)
+
 3. **Log into the Virtual Machine & Disable Firewall:**
    - Open **Windows Firewall Settings**:  
      `Start -> wf.msc -> Properties -> Set All to Off`
+
+📌 **Screenshot:**
+![Firewall Settings](assets/firewall.png)
 
 ---
 
@@ -40,6 +52,9 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 3. **Open Event Viewer**:
    - Navigate to **Security Logs**  
    - Look for **Event ID 4625** (failed login attempts).
+
+📌 **Screenshot:**
+![Event Viewer](assets/eventviewer.png)
 
 ---
 
@@ -71,6 +86,9 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
      - **Search Key:** network  
      - **54,000 rows should be imported**
 
+📌 **Screenshot:**
+![GeoIP Data](assets/geoip-summarized.csv)
+
 3. **Query with Geolocation Data**:
    ```kql
    let GeoIPDB_FULL = _GetWatchlist("geoip");
@@ -96,6 +114,8 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Adjust the **Map Settings**  
    - Display a **Geolocation-based Attack Map**
 
+📌 **Screenshot:**
+![Attack Map](assets/attackmap.png)
 
 ---
 
@@ -104,4 +124,4 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 - Implementing **log forwarding** with **Sentinel & Log Analytics**  
 - Writing **KQL queries** to analyze security logs  
 - Enriching logs with **geolocation data**  
-- Building a **visual attack map** in **Sentinel**  
+- Building a **visual attack map** in **Sentinel**

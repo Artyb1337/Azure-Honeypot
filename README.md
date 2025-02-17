@@ -31,11 +31,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Open **Windows Firewall Settings**:  
      `Start -> wf.msc -> Properties -> Set All to Off`
 
-📌 **Recommended Screenshots:**  
-- Virtual Machine creation screen  
-- Network Security Group rules (allowing all inbound traffic)  
-- Windows Firewall settings turned off  
-
 ---
 
 ## Part 3: Logging into the VM & Inspecting Logs
@@ -45,10 +40,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
 3. **Open Event Viewer**:
    - Navigate to **Security Logs**  
    - Look for **Event ID 4625** (failed login attempts).
-
-📌 **Recommended Screenshots:**  
-- Failed login attempts in **Event Viewer**
-- Security logs showing **Event ID 4625**
 
 ---
 

@@ -36,7 +36,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Open **Windows Firewall Settings**:  
      `Start -> wf.msc -> Properties -> Set All to Off`
 
-📌 **Screenshot:**
 ![Firewall Settings](assets/firewall.png)
 
 ---
@@ -49,7 +48,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Navigate to **Security Logs**  
    - Look for **Event ID 4625** (failed login attempts).
 
-📌 **Screenshot:**
 ![Event Viewer](assets/eventviewer.png)
 
 ---
@@ -108,7 +106,6 @@ This guide walks through setting up a honeypot in **Azure**, forwarding logs, an
    - Adjust the **Map Settings**  
    - Display a **Geolocation-based Attack Map**
 
-📌 **Screenshot:**
 ![Attack Map](assets/attackmap.png)
 
 ---
